@@ -11,10 +11,10 @@ The course will maiinly focus on introducing participants to the basic numerical
  
 
 
-## Part I:  Structural estimation of dynamic discrete choice models      
+## [Part I:  Structural estimation of dynamic discrete choice models](https://github.com/bschjerning/dp_uab/tree/main/1_dynamic_discrete_choice)      
 In the first part of lectures on dynamic discrete choice models we will consider a variety of methods to structurally estimate dynamic discrete choice models (NFXP, MPEC, NPL, CCP type estimators). As a testbed for comparison we will use the canonical Bus Engine Replacement model in Rust's 1987 *Econometrica* paper.
 
-## Part II: Structural estimation of models with continuous and discrete choices
+## [Part II: Structural estimation of models with continuous and discrete choices](https://github.com/bschjerning/dp_uab/tree/main/2_discrete_continuous_choice)
 In the second series of lectures on dynamic discrete-continuous choice models we will consider state of the art solution methods for models that combine continuous and discrete choices. We start with a simple consumption savings model, and then move on to models that combine discrete and continuous choices and show how state of the art methods (DC-EGM) can be used to solve and estimate a class of Discrete-Continuous Dynamic Choice Model fast and accurately. 
 
 ## Videotaped lectures
