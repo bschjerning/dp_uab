@@ -8,7 +8,6 @@ Rust, J. (1987). Optimal replacement of GMC bus engines: An empirical model of H
 
 ## Plan
 1. The Nested Fixed Point Algorithm [[Slides]](https://github.com/bschjerning/dp_uab/blob/main/1_dynamic_discrete_choice/1_nfxp.pdf)
-[[Video 1 - solving Zurcher model]](https://youtu.be/JfFCZhBYgGw) 
 1. Constrained Optimization Approaches to Structural Estimation (MPEC) [[Slides]](https://github.com/bschjerning/dp_uab/blob/main/1_dynamic_discrete_choice/2_mpec.pdf)
 1. Sequential Estimation in Discrete Decision Problems: Nested Pseudo Likelihood (NPL) and CCP estimators [[Slides]](https://github.com/bschjerning/dp_uab/blob/main/1_dynamic_discrete_choice/3_npl.pdf)
 1. Stationary Equilibrium: Equilibrium Trade in Automobile Markets [[Slides]](https://github.com/bschjerning/dp_uab/blob/main/1_dynamic_discrete_choice/4_eqbtrade.pdf)
