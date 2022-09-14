@@ -23,7 +23,7 @@ The course will mainly focus on introducing participants to the basic numerical 
 
 - In this last series of lectures (which we will actially cover as the third one) we consider the cahlenges of estimation of dymnamic games of incomplete information. We wiil start with the simplest possible game. A static enrty game with two players, and show how we can estimate the model using NFXP, MPEC, NPL, and 2-step CCPs. A special focus will be on the issue taht arise from mutiple equilibria. We the move on to dynamic games.     
 
-# Tentative lecture plan [slides in barckets]
+# Tentative lecture plan [slides in brackets]
 **Monday Sept 12 2022: class 11:00 -14:00 ( Room: AULA Seminari A)**
 
 - Introduction to Markov decision processes (MDP) and dynamic programming (DP) [[0_theory_tools/01_dp_intro.ipynb](https://github.com/bschjerning/dp_uab/blob/main/0_theory_tools/01_dp_intro.ipynb)]
@@ -31,12 +31,12 @@ The course will mainly focus on introducing participants to the basic numerical 
 
 **Tuesday Sept 13 2022: seminar  15:00 -17:00 (Room: AULA Seminari A)**
 
--  Equilirbrium Trade in Automobiles [[1_dynamic_discrete_choice/4_eqbtrade.pdf](https://github.com/bschjerning/dp_uab/blob/main/1_dynamic_discrete_choice/4_eqbtrade.pdf)]
+-  Equilibrium Trade in Automobiles [[1_dynamic_discrete_choice/4_eqbtrade.pdf](https://github.com/bschjerning/dp_uab/blob/main/1_dynamic_discrete_choice/4_eqbtrade.pdf)]
 
 **Wednesday Sept 14 2022: class 10:00 -13:00  ( Room: AULA Seminari A)**
 
 -  The Nested Fixed Point Algorithm and Constrained Optimization Approaches to Structural Estimation (MPEC) [[1_dynamic_discrete_choice/1_nfxp_mpec.pdf]](https://github.com/bschjerning/dp_uab/blob/main/1_dynamic_discrete_choice/1_nfxp_mpec.pdf)
--  Sequential Estimation in Discrete Decision Problems: Nested Pseudo Likelihood (NPL) and CCP estimators [[1_dynamic_discrete_choice/3_npl.pdf]](https://github.com/bschjerning/dp_uab/blob/main/1_dynamic_discrete_choice/3_npl.pdf)
+-  Sequential Estimation in Discrete Decision Problems: Nested Pseudo Likelihood (NPL) and CCP estimators [[1_dynamic_discrete_choice/3_npl_ccp.pdf]](https://github.com/bschjerning/dp_uab/blob/main/1_dynamic_discrete_choice/3_npl_ccp.pdf)
 
 **Thusday Sept 15 2022: class 10:00 - 13:00 ( Room: AULA Seminari A)**
 
@@ -52,7 +52,7 @@ and Multiplicity of equilibria [[3_dynamic_discrete_games/3_ddg.pdf]](https://gi
 
 **Friday Sept 16 2022 : class 10:00 -13:00 ( Room: AULA Seminari A)**
 - Stochastic DP, 1-d Numerical Integration, Deaton's model [[0_theory_tools/03_deaton_1d_integration.ipynb](https://github.com/bschjerning/dp_uab/blob/main/0_theory_tools/03_deaton_1d_integration.ipynb)]
-- ime iterations and the Endogenous gridpoint method (EGM) [[2_discrete_continuous_choice/1_euler_egm.ipynb](https://github.com/bschjerning/dp_uab/blob/main/2_discrete_continuous_choice/1_euler_egm.ipynb)]
+- Time iterations and the Endogenous gridpoint method (EGM) [[2_discrete_continuous_choice/1_euler_egm.ipynb](https://github.com/bschjerning/dp_uab/blob/main/2_discrete_continuous_choice/1_euler_egm.ipynb)]
 - Discrete-Continuous Choice Models  (DC-EGM) [[2_dcegm.pdf]](https://github.com/bschjerning/dp_uab/blob/main/2_discrete_continuous_choice/2_dcegm.pdf)
 - Empirical application of DC-EGM (Iskhakov and Keane, JoE 2021): [[4_aupens_dc_egm.pdf]](https://github.com/bschjerning/dp_uab/blob/main/2_discrete_continuous_choice/4_aupens_dc_egm.pdf)              
 
