@@ -5,17 +5,18 @@
 % methods to cosinder
 % method={'nfxp (mle)'}; 
 method={'nfxp (pmle)', 'nfxp (mle)'}; 
-% method={'nfxp (mle)', 'nfxp (pmle)', 'mpec (pmle)'}; % available:  
+% method={'nfxp (mle)', 'nfxp (pmle)', 'mpec (pmle)', 'npl'}; % available:  
 
 % Set parameters (values for RC and mp.c will be used as starting values during estimation)
+mp0.beta=0.9999;     	    % Replacement cost
 mp0.RC=0;     				% Replacement cost
 mp0.c=0;					% Cost parameter
 mp0.n=175;					% Number of grid-points
-mp0.bellman_type='ev';  	% bellman in expected value ('ev') or ('iv') integrated value function space  
+mp0.bellman_type='iv';  	% bellman in expected value ('ev') or ('iv') integrated value function space  
 mp0.pnames_u={'RC', 'c'};	% utility parameters to be estimated
 mp0.pnames_P={'p'};         % set mp0.pnames_P={}; to skip estimation of transition parameters  
 mp0.bustypes=[1,2,3,4];		% Vector with chosen bus types (elements can be 1,2,3,4) 
-mp0.ap.sa_min=2;
+mp0.ap.sa_min=5;
 % Fill out remaining parameters and update parameter dependencies
 mp=zurcher.setup(mp0);
 
@@ -36,6 +37,11 @@ for i=1:numel(method)
 			% Two step partial MLE using MPEC
 			mp.pnames_P={};
 			[results, theta_hat, Avar]=mpec.estim(data, mp);
+		case 'npl'
+			pk0 = ones(mp.n,1)*0.1;    % Starting values for CCPs
+			Kmax=20;
+			theta0=[0;0];
+			[mp, pk, logl, K]=npl.estim(theta0, pk0, data, P, mp, Kmax);
 		otherwise
 			error('Method does not exist');
 	end
@@ -51,12 +57,14 @@ for i=1:numel(method)
 		fprintf('n              = %10.5f \n',mp.n);
 		fprintf('Sample size    = %10.5f \n',numel(data.d));
 	end
-	fprintf('\nMethod %s\n', method{i});
-	output.estimates(results, [mp.pnames_u mp.pnames_P], theta_hat, Avar);
-	fprintf('log-likelihood    = %10.5f \n',results.llval);
-	fprintf('runtime (seconds) = %10.5f \n',results.cputime);
-	if isfield(results,'grad_direc') 
-		fprintf('g''*inv(h)*g      = %10.5e \n',results.grad_direc);
+	if ~strcmp(method{i},'npl') 
+		fprintf('\nMethod %s\n', method{i});
+		output.estimates(results, [mp.pnames_u mp.pnames_P], theta_hat, Avar);
+		fprintf('log-likelihood    = %10.5f \n',results.llval);
+		fprintf('runtime (seconds) = %10.5f \n',results.cputime);
+		if isfield(results,'grad_direc') 
+			fprintf('g''*inv(h)*g      = %10.5e \n',results.grad_direc);
+		end
 	end
 end
 

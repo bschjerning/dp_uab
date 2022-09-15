@@ -87,7 +87,7 @@ classdef npl
         function [mp, pk, logl, K]=estim(theta0, pk0, data, P, mp, Kmax);  % NPL algorithm for K-PI estimators
             global pk
 
-            options =  optimset('Algorithm','trust-region','Display','off', 'GradObj','on', 'TolFun',1E-6,'TolX',0,'Hessian','on');
+            options =  optimset('Algorithm','trust-region','Display','off', 'GradObj','on', 'TolFun',1E-10,'TolX',0,'Hessian','on');
             if nargin==5;
                 Kmax=100;
             end
@@ -129,10 +129,10 @@ classdef npl
                 theta0 = theta_npl;  % Theta step K-1 
                
                 %% Print estimation results
-                fprintf('K = %-10d %14.3f %14.3f %14.1f \n' , ...
+                fprintf('K = %-10d %14.3f %14.3f %14.3f \n' , ...
                 K, mean(theta_npl(1)) ,  mean(theta_npl(2)) , mean(logl)*size(data.x,1)); 
 
-                if NPL_metric < 1e-6
+                if NPL_metric < 1e-4
                     break
                 end
             end

@@ -45,10 +45,11 @@ Incomplete Information [[3_dynamic_discrete_games/1_sgame.pdf]](https://github.c
 
 - Solving and Estimating DYNAMIC Games of
 Incomplete Information [[3_dynamic_discrete_games/2_dgame.pdf]](https://github.com/bschjerning/dp_uab/blob/main/3_dynamic_discrete_games/2_dgame.pdf)
+
 - Solving and estimating DIRECTIONAL dynamic games
 and Multiplicity of equilibria [[3_dynamic_discrete_games/3_ddg.pdf]](https://github.com/bschjerning/dp_uab/blob/main/3_dynamic_discrete_games/3_ddg.pdf)
 
-- AFTER CLASS: A dynamic equilibrium model of commuting, residential and work location choices [[1_dynamic_discrete_choice/3_urban.pdf]](https://github.com/bschjerning/dp_uab/blob/main/1_dynamic_discrete_choice/3_urban.pdf)
+- AFTER CLASS (14:00-15:30): A dynamic equilibrium model of commuting, residential and work location choices [[1_dynamic_discrete_choice/3_urban.pdf]](https://github.com/bschjerning/dp_uab/blob/main/1_dynamic_discrete_choice/3_urban.pdf)
 
 **Friday Sept 16 2022 : class 10:00 -13:00 ( Room: AULA Seminari A)**
 - Stochastic DP, 1-d Numerical Integration, Deaton's model [[0_theory_tools/03_deaton_1d_integration.ipynb](https://github.com/bschjerning/dp_uab/blob/main/0_theory_tools/03_deaton_1d_integration.ipynb)]

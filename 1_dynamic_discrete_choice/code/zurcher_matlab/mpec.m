@@ -29,13 +29,20 @@ classdef mpec
       [J_pattern, H_pattern] = mpec.sparsity_pattern(n_u,n_P,mp.n, n_P+1);
 
       % set options optimizer options for fmincon
-      options_mpec = optimset('DerivativeCheck','off','Display','on',...
-          'GradConstr','on','GradObj','on','TolCon',1E-8,'TolFun',1E-8,'TolX',1E-15, ...
+      % options_mpec = optimset('DerivativeCheck','off','Display','on',...
+      %     'GradConstr','on','GradObj','on','TolCon',1E-8,'TolFun',1E-8,'TolX',1E-15, ...
+      %     'JacobPattern',J_pattern, 'HessPattern', H_pattern, ...
+      %     'MaxFunEval', 100000, 'Algorithm','interior-point' ); 
+
+    % set options optimizer options for fmincon
+      options_mpec = optimset('DerivativeCheck','off','Display','off',...
+          'GradConstr','on','GradObj','on','TolCon',1E-10,'TolFun',1E-8,'TolX',1E-15, ...
           'JacobPattern',J_pattern, 'HessPattern', H_pattern, ...
           'MaxFunEval', 100000, 'Algorithm','interior-point' ); 
 
-      % options_mpec = optimset('DerivativeCheck','off','Display','off',...
-      %     'GradConstr','on','GradObj','on','TolCon',1E-14,'TolFun',1E-8,'TolX',1E-15, ...
+
+      % options_mpec = optimset('DerivativeCheck','off','Display','iter',...
+      %     'GradConstr','on','GradObj','on','TolCon',1E-10,'TolFun',1E-8,'TolX',1E-15, ...
       %     'MaxFunEval', 100000); 
 
 
@@ -46,11 +53,10 @@ classdef mpec
       lb = zeros(2+mp.n,1); ub = zeros(2+mp.n,1);
       lb(1) = -0.000000000001; ub(1) = inf; %thetaCost
       lb(2) = -0.000000000001; ub(2) = inf; %RC
-      lb(1) = -0.000000000001; ub(1) = inf; %thetaCost
-      lb(2) = -0.000000000001; ub(2) = inf; %RC
 
       %Put bound on EV; this should not bind, but is a cautionary step to help keep algorithm within bounds
       lb(3:end) = -inf; ub(3:end) = 0; %EV
+      lb(3:end) = -10000; ub(3:end) = 0; %EV
 
       % No linear equality constraints
       Aeq = []; beq = [];
@@ -81,7 +87,7 @@ classdef mpec
       results.MajorIter = OUTPUT.iterations;
       results.funcCount = OUTPUT.funcCount;
 
-      results.llval   =   -ll_p_mpec(theta_hat)*samplesize;
+      results.llval   =   - ll_p_mpec(theta_hat)*samplesize;
     end
 
     function [f,g,h ]=ll(data, mp, theta) 
