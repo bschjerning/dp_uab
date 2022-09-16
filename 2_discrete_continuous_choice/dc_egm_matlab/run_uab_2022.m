@@ -49,9 +49,9 @@ if 0
   m.solve_egm;
   m.sim;
   m.plot('sim consumption');
-%  m.solve_vfi;
-%  m.sim;
-%  m.plot('sim consumption');
+ % m.solve_vfi;
+ % m.sim;
+ % m.plot('sim consumption');
 end
 %%
 
@@ -65,7 +65,7 @@ end
 
 
 %% Flat simulated consumption path using retirement model without taste shocks
-if 1
+if 0
   m2=model_retirement;
   m2.ngridm=500;
   m2.df=1/(1+m2.r); %flat consumption hopefully
