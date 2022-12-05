@@ -1,5 +1,6 @@
 # Mini Course in Dynamic Structural Econometrics, UAB, September 12-16, 2022
 
+
 This repository contains teaching materials for lectures in a short PhD course in **Dynamic Structural Econometrics** to be held in Barcelona September 12-16, 2022. Repository will be updated as we go a along. 
 
 ## Course description 
